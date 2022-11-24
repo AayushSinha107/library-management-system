@@ -1,0 +1,25 @@
+{% extends 'home/home.html' %}
+{% block title %}Readers{% endblock title %}
+{% block body %}
+
+<h2>List of registered readers:-</h2>
+<center>
+    <table class="table table-striped">
+        <tr>
+            <th>User Code</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>E-mail</th>
+        </tr>
+        {% for i in ibook %}
+            <tr>
+                <td>{{i.user_code}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.email}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+  
+{% endblock body %}

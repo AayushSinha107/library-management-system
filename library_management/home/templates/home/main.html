@@ -1,0 +1,36 @@
+{% extends 'home/home.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<div class="card text-bg-success mb-3 cust-cen-pad" style="max-width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Number of Issued Books</h5>
+      <center>
+      <h3 class="card-text cust-cen-pad">{{icount}}</h3>
+      </center>
+    </div>
+</div>
+<h2>List of Issued Books:-</h2>
+<center>
+    <table class="table table-striped">
+        <tr>
+            <th>Book Issued</th>
+            <th>Issued by</th>
+            <th>Issue Date</th>
+            <th>Return Date</th>
+        </tr>
+        {% for i in ibook %}
+            <tr>
+                <td>{{i.book_code}}</td>
+                <td>{{i.user_code}}</td>
+                <td>{{i.issue_date}}</td>
+                <td>{{i.return_date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+
+<p>To see list of all the books owned by the library <a href='books/'>click here</a></p>
+<p>To see list of all the registered readers <a href='readers/'>click here</a></p>
+
+{% endblock body %}
