@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'libmng',
         'USER': 'root',
         'HOST': 'localhost',
-        'PASSWORD': 'aayush@10'
+        'PASSWORD': 'xyz'
     }
 }
 
